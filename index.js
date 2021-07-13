@@ -36,7 +36,7 @@ onlineKioskas.items();
 
 onlineKioskas.updatePrice('bulves', 90);
 // "Meskiuko kioskas" updated price and sells bulves for 0.90 EUR now!
-
+/*
 onlineKioskas.createCart('Augustas');
 // Augustas have an open cart at "Meskiuko kioskas"!
 
@@ -51,7 +51,7 @@ onlineKioskas.addItemToCart('Barbora', 1, 2);
 onlineKioskas.addItemToCart('Barbora', 3, 1);
 onlineKioskas.addItemToCart('Barbora', 5, 1);
 
-onlineKioskas.order('Augustas');
+onlineKioskas.order('Augustas');*/
 /*
 {
     owner: 'Augustas',
@@ -63,7 +63,7 @@ onlineKioskas.order('Augustas');
 }
 */
 
-onlineKioskas.order('Barbora');
+//onlineKioskas.order('Barbora');
 /*
 {
     owner: 'Barbora',
@@ -74,7 +74,7 @@ onlineKioskas.order('Barbora');
     ]
 }
 */
-
+/*
 onlineKioskas.orderPrice('Augustas');
 // Augustas order: 5.30 EUR.
 
@@ -106,7 +106,7 @@ onlineKioskas.addItemToCart('John', 5, 1);
 onlineKioskas.addItemToCart('John', 1, 1);
 // Item is out of stock!
 
-onlineKioskas.order('John');
+onlineKioskas.order('John');*/
 /*
 {
     owner: 'Augustas',
@@ -117,7 +117,7 @@ onlineKioskas.order('John');
     ]
 }
 */
-
+/*
 onlineKioskas.orderPrice('John');
 // Augustas order: 5.60 EUR.
 
@@ -130,3 +130,4 @@ onlineKioskas.shopSummary();
 // Profit: 10.80 EUR
 // Possible profit: 5.60 EUR
 // ====================
+*/
