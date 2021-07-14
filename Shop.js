@@ -6,7 +6,7 @@ class Shop {
     }
 
     intro() {
-        console.log(`Hi, we are "${this.shopName}"`);
+        console.log(`Hi, we are "${this.shopName}". \nUse .items() method to get list of items to purchase.\nUse .order() method to get your order details.`);
     }
     addItem(item, price) {
         if (!this.isValidProductName(item) ||
@@ -14,10 +14,10 @@ class Shop {
             return false;
         }
         let product = item;
-        let cost = (price / 100).toFixed(2);
+        let unitPrice = (price / 100).toFixed(2);
 
         this.list.push({ product, price });
-        console.log(`"${this.shopName}" sells ${product} for ${cost} EUR now!`);
+        console.log(`"${this.shopName}" sells ${product} for ${unitPrice} EUR now!`);
     }
 
     items() {
@@ -31,15 +31,22 @@ class Shop {
     }
 
     updatePrice(itemName, newPrice) {
+        for (let i = 0; i < this.list.lenght; i++) {
+            const product = this.list[i];
 
-    };
-
-
-    creatChart() {
-
+            if (itemName === product.item.toLowerCase()) {
+                product.price = newPrice;
+            }
+        }
+        console.log(`"${this.shopName}" updated price and sells ${itemName} for ${(newPrice / 100).toFixed(2)} EUR now!`);
     }
 
-    addItemToChart() {
+    createCart(client) {
+        this.clientList.push({ client, items: [] });
+        console.log(`${client} has an open cart at "${this.shopName}"!`);
+    }
+
+    addItemToCart(client, item) {
 
     }
 
