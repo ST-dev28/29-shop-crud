@@ -76,7 +76,7 @@ onlineKioskas.order('Augustas');*/
 */
 /*
 onlineKioskas.orderPrice('Augustas');
-// Augustas order: 5.30 EUR.
+// Augustas order: 4.40 EUR.
 
 onlineKioskas.orderPrice('Barbora');
 // Barbora order: 5.50 EUR.
