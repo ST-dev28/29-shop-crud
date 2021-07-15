@@ -3,6 +3,7 @@ class Shop {
         this.list = [];
         this.shopName = name;
         this.clientList = [];
+        this.cart = [];
     }
 
     intro() {
@@ -17,6 +18,7 @@ class Shop {
         let unitPrice = (price / 100).toFixed(2);
 
         this.list.push({ product, price });
+        console.log(this.list);
         console.log(`"${this.shopName}" sells ${product} for ${unitPrice} EUR now!`);
     }
 
@@ -43,11 +45,23 @@ class Shop {
 
     createCart(client) {
         this.clientList.push({ client, items: [] });
+
         console.log(`${client} has an open cart at "${this.shopName}"!`);
+        //console.log(this.cart);
     }
 
-    addItemToCart(client, item) {
-
+    addItemToCart(name, id, count) {
+        for (let i = 0; i < this.cart.length; i++) {
+            const product = this.cart[i];
+            if (product.client === name) {
+                this.cart.push({ id, count });
+                //product.items.push({
+                //id: id,
+                //count: count
+                //})
+            }
+        }
+        //console.log(this.cart);
     }
 
     order() {
